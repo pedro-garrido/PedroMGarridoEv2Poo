@@ -1,20 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package pedromgarridoev2poo;
-
-/**
- *
- * @author belca
- */
+import java.util.*;
 public class PedroMGarridoEv2Poo {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ArrayList<trabajador> trabajadores = new ArrayList<trabajador>();//inicializar arraylist trabajadores
+        //creacion trabajado 1 y 2
+        trabajador trabajador_1 = new trabajador("Juan Perez", 30, 30000000, "Programador", "talca"); 
+        trabajador trabajador_2 = new trabajador("Roberto to", 26, 33366654, "QA", "chiloe"); 
+        //agregar trabajador 1 y 2 a trabajadores
+        trabajadores.add(trabajador_1);
+        trabajadores.add(trabajador_2);
+
+
     }
     
 }
