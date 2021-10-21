@@ -130,7 +130,11 @@ public class PedroMGarridoEv2Poo {
       pew.bailar();
       break;
       
-      }
+    case 4:
+    trabajador trabajador_1 = new trabajador("chopper", 2, 111, "aaaaaa", "aaaa");
+      funcion.Fagregar(trabajador_1, trabajadores);
+    break;
+    }
     scanner.close();
   }
 }
