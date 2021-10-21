@@ -24,6 +24,8 @@ public class PedroMGarridoEv2Poo {
         case 1:
           //leer y crear trabajadores
           do {
+            System.out.println("*Tip: al menos un programador residente en Talca mayor de edad*");
+            System.out.println("=========================");
             System.out.println("Ingrese edad.");
             Integer edad = scanner.nextInt();
             System.out.println("Ingrese nombre.");
