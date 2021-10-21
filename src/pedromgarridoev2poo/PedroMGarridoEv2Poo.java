@@ -10,6 +10,10 @@ public class PedroMGarridoEv2Poo {
     int option;
     ArrayList<trabajador> trabajadores = new ArrayList<trabajador>(); // inicializar arraylist trabajadores
     ArrayList<rol> roles = new ArrayList<rol>(); //crear arraylist roles
+    
+    
+    
+    do{
     System.out.println("ingrese una opcion a revisar: \n"+"1. Caso trabajadores(caso 1, 3, 4 y 7) \n"+"2. Vehiculo y moto (caso 2) \n"+"3. roles (caso 5) \n"+"4. Clase usuario con accion bailar (caso 6)");
     option = scanner.nextInt();
     switch (option) {
@@ -142,6 +146,34 @@ public class PedroMGarridoEv2Poo {
       pew.bailar();
       break;
     }
+
+
+
+
+
+
+
+
+          String yn;
+          while (true) {
+            System.out.println("revisar otro caso? [y/n]");
+            yn = scanner.next();
+            if (yn.equalsIgnoreCase("Y")) {
+              exit = true;
+              break;
+            } else if (yn.equalsIgnoreCase("N")) {
+              exit = false;
+              break;
+            } else {
+              System.out.println("Opcion invalida");
+            }
+          }
+
+
+
+
+  }while(exit==true);
+  
     scanner.close();
-  }
+}
 }
