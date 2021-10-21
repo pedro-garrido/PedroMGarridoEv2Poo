@@ -110,7 +110,8 @@ public class PedroMGarridoEv2Poo {
           }
         } while (exit == true);
         break;
-      case 2:
+      //clase rol mostrada por pantalla
+        case 2:
         rol administrador = new rol("admin", "123", "admin");
         rol cliente = new rol("cliente", "321", "user");
         roles.add(administrador);
@@ -122,7 +123,14 @@ public class PedroMGarridoEv2Poo {
           System.out.println(rol.getTipo());
         }
         break;
-    }
+      case 3:
+      usuario pew = new usuario("felix", "bailarin");
+      System.out.println(pew.getNombre());
+      System.out.println(pew.getRol());
+      pew.bailar();
+      break;
+      
+      }
     scanner.close();
   }
 }
