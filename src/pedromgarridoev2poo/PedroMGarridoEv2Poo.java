@@ -10,7 +10,7 @@ public class PedroMGarridoEv2Poo {
     int option;
     ArrayList<trabajador> trabajadores = new ArrayList<trabajador>(); // inicializar arraylist trabajadores
     ArrayList<rol> roles = new ArrayList<rol>(); //crear arraylist roles
-
+    System.out.println("ingrese una opcion a revisar: \n"+"1. Caso trabajadores(caso 1, 3, 4 y 7) \n"+"2. Vehiculo y moto (caso 2) \n"+"3. roles (caso 5) \n"+"4. Clase usuario con accion bailar (caso 6)");
     option = scanner.nextInt();
     switch (option) {
       case 1:
@@ -34,7 +34,8 @@ public class PedroMGarridoEv2Poo {
             cargo,
             ciudad
           );
-          trabajadores.add(trabajador);
+          System.out.println("===============");
+          funcion.Fagregar(trabajador, trabajadores);
           System.out.println("============");
 
           String yn;
@@ -69,7 +70,7 @@ public class PedroMGarridoEv2Poo {
                 ) {
                   System.out.println(
                     trabajador.getNombre() +
-                    "Es residente en la ciudad de Talca y ocupa el cargo Programador"
+                    " Es residente en la ciudad de Talca y ocupa el cargo Programador"
                   );
                   System.out.println("======================");
                 }
@@ -88,7 +89,7 @@ public class PedroMGarridoEv2Poo {
               break;
             default:
               exit = true;
-              System.out.println("Opcion invalida eeeeeeee");
+              System.out.println("Opcion invalida");
               break;
           }
           if (option == 1 || option == 2) {
@@ -104,14 +105,25 @@ public class PedroMGarridoEv2Poo {
                 exit = false;
                 break;
               } else {
-                System.out.println("Opcion invalida aaaaaaaa");
+                System.out.println("Opcion invalida");
               }
             }
           }
         } while (exit == true);
         break;
-      //clase rol mostrada por pantalla
-        case 2:
+      case 2:
+        moto suzuki = new moto("123Abc", "gasolina", "rojo ferrari");
+        suzuki.acelerar();
+      break;
+      
+      
+      
+      
+      
+      
+      
+        //clase rol mostrada por pantalla
+        case 3:
         rol administrador = new rol("admin", "123", "admin");
         rol cliente = new rol("cliente", "321", "user");
         roles.add(administrador);
@@ -123,17 +135,12 @@ public class PedroMGarridoEv2Poo {
           System.out.println(rol.getTipo());
         }
         break;
-      case 3:
+      case 4:
       usuario pew = new usuario("felix", "bailarin");
       System.out.println(pew.getNombre());
       System.out.println(pew.getRol());
       pew.bailar();
       break;
-      
-    case 4:
-    trabajador trabajador_1 = new trabajador("chopper", 2, 111, "aaaaaa", "aaaa");
-      funcion.Fagregar(trabajador_1, trabajadores);
-    break;
     }
     scanner.close();
   }
